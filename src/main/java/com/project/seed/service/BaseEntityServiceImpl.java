@@ -1,5 +1,6 @@
 package com.project.seed.service;
 
+import com.project.seed.exception.NotFoundException;
 import com.project.seed.model.BaseEntity;
 import com.project.seed.repository.BaseEntityRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,22 +27,29 @@ public class BaseEntityServiceImpl implements BaseEntityService {
     }
 
     @Override
-    public Optional<BaseEntity> getById(Integer id) {
+    public Optional<BaseEntity> getById(Integer codEntity) {
         return baseEntityRepository
-                .findById(id);
+                .findById(codEntity);
     }
 
     @Override
-    public BaseEntity update(BaseEntity baseEntity) {
-        return baseEntityRepository
-                .save(baseEntity);
+    public BaseEntity update(Integer codEntity, BaseEntity entity) {
+        BaseEntity baseEntity = baseEntityRepository.findById(codEntity).
+                orElseThrow(() -> new NotFoundException("The base entity cannot be found!"));
+
+        baseEntity.setCodEntity(entity.getCodEntity());
+        baseEntity.setName(entity.getName());
+        return baseEntityRepository.save(baseEntity);
+
     }
 
     @Override
-    public void deleteById(Integer id) {
+    public void deleteById(Integer codEntity) {
+        BaseEntity baseEntity = baseEntityRepository.findById(codEntity).
+                orElseThrow(() -> new NotFoundException("The base entity cannot be found!"));
+
         baseEntityRepository
-                .deleteById(id);
+                .deleteById(baseEntity.getCodEntity());
     }
-
 }
 

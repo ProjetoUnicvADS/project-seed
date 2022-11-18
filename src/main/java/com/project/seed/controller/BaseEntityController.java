@@ -1,11 +1,10 @@
 package com.project.seed.controller;
 
 import com.project.seed.model.BaseEntity;
+import com.project.seed.model.dto.BaseEntityDto;
 import com.project.seed.service.BaseEntityService;
-import io.swagger.annotations.Api;
-import io.swagger.annotations.ApiOperation;
-import io.swagger.annotations.ApiResponse;
-import io.swagger.annotations.ApiResponses;
+import io.swagger.annotations.*;
+import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -16,8 +15,11 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/api")
-@Api(value = "Base Entities", tags = {"BaseEntity"}, description = " ")
+@Api(value = "Base Entities", tags = {"BaseEntity"})
 public class BaseEntityController {
+
+    @Autowired
+    private ModelMapper modelMapper;
 
     @Autowired
     private BaseEntityService baseEntityService;
@@ -28,18 +30,26 @@ public class BaseEntityController {
             @ApiResponse(code = 200, message = "The base entities have been found successfully!"),
             @ApiResponse(code = 404, message = "No base entities was found!")
     })
-    public ResponseEntity<List<BaseEntity>> list() {
-        return ResponseEntity.status(HttpStatus.OK).body(baseEntityService.list());
+    public ResponseEntity<List<BaseEntityDto>> list() {
+        List<BaseEntityDto> listEntitiesDto = baseEntityService.list().stream()
+                .map(entity -> modelMapper.map(entity, BaseEntityDto.class)).toList();
+
+        return ResponseEntity.status(HttpStatus.OK).body(listEntitiesDto);
     }
 
-    @GetMapping("baseEntity/{id}")
+    @GetMapping("baseEntity/{codEntity}")
     @ApiOperation("Show an base entity")
     @ApiResponses({
             @ApiResponse(code = 200, message = "The base entity has been successfully found!"),
             @ApiResponse(code = 404, message = "The base entity cannot be found!")
     })
-    public ResponseEntity<Optional<BaseEntity>> getById(@PathVariable Integer id) {
-        return ResponseEntity.status(HttpStatus.OK).body(baseEntityService.getById(id));
+    public ResponseEntity<BaseEntityDto> getById(@PathVariable Integer codEntity) {
+        Optional<BaseEntity> entity = baseEntityService.getById(codEntity);
+
+        BaseEntityDto dtoFromEntity = modelMapper.map(entity, BaseEntityDto.class);
+
+        return ResponseEntity.status(HttpStatus.OK).body(dtoFromEntity);
+
     }
 
     @PostMapping("baseEntity")
@@ -48,8 +58,14 @@ public class BaseEntityController {
             @ApiResponse(code = 200, message = "The base entity has been successfully registered!"),
             @ApiResponse(code = 404, message = "The base entity could not be registered!")
     })
-    public ResponseEntity<BaseEntity> save(@RequestBody BaseEntity baseEntity) {
-        return ResponseEntity.status(HttpStatus.CREATED).body(baseEntityService.save(baseEntity));
+    public ResponseEntity<BaseEntityDto> save(@RequestBody BaseEntityDto entityDto) {
+
+        BaseEntity entityFromDto = modelMapper.map(entityDto, BaseEntity.class);
+        BaseEntity entity = baseEntityService.save(entityFromDto);
+
+        BaseEntityDto dtoFromEntity = modelMapper.map(entity, BaseEntityDto.class);
+
+        return ResponseEntity.status(HttpStatus.CREATED).body(dtoFromEntity);
     }
 
     @PutMapping("baseEntity")
@@ -58,14 +74,21 @@ public class BaseEntityController {
             @ApiResponse(code = 200, message = "The base entity has been successfully updated!"),
             @ApiResponse(code = 404, message = "The base entity could not be updated!")
     })
-    public ResponseEntity<BaseEntity> update(@RequestBody BaseEntity baseEntity) {
-        return ResponseEntity.status(HttpStatus.OK).body(baseEntityService.update(baseEntity));
+    public ResponseEntity<BaseEntityDto> update(@RequestBody Integer codEntity, @RequestBody BaseEntityDto entityDto) {
+
+        BaseEntity entityFromDto = modelMapper.map(entityDto, BaseEntity.class);
+        BaseEntity entity = baseEntityService.save(entityFromDto);
+
+        BaseEntityDto dtoFromEntity = modelMapper.map(entity, BaseEntityDto.class);
+
+        return ResponseEntity.status(HttpStatus.OK).body(dtoFromEntity);
     }
 
-    @DeleteMapping("baseEntity/{id}")
+    @DeleteMapping("baseEntity/{codEntity}")
     @ApiOperation("Delete an base entity")
-    public ResponseEntity<String> deleteById(@PathVariable Integer id) {
-        baseEntityService.deleteById(id);
+    public ResponseEntity<String> deleteById(@PathVariable Integer codEntity) {
+        baseEntityService.deleteById(codEntity);
+
         return ResponseEntity.status(HttpStatus.OK).body("The base entity has been successfully removed!");
     }
 }

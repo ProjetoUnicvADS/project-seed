@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="5af479fe-4481-447f-9453-c772a0cd167d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/seed/model/dto/BaseEntityDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/seed/controller/BaseEntityController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/seed/controller/BaseEntityController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/seed/model/BaseEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/seed/model/BaseEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/seed/service/BaseEntityService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/seed/service/BaseEntityService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/seed/service/BaseEntityServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/seed/service/BaseEntityServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/seed/controller/BaseEntityController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/seed/controller/BaseEntityController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/seed/model/BaseEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/seed/model/BaseEntity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/seed/service/BaseEntityService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/seed/service/BaseEntityService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/seed/service/BaseEntityServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/seed/service/BaseEntityServiceImpl.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JpbToolWindowState">
+    <option name="myId2FirstActivated">
+      <map>
+        <entry key="com.haulmont.jpb.jpaInspector" value="true" />
+        <entry key="com.haulmont.jpb.jpaPalette" value="true" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
+      </map>
+    </option>
+    <option name="myId2Visible">
+      <map>
+        <entry key="com.haulmont.jpb.jpaInspector" value="true" />
+        <entry key="com.haulmont.jpb.jpaPalette" value="false" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="false" />
+      </map>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2H5xxaGr5NJ14XyiPVSgXghyE2H" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/kassi/Documents/dev/Java/SuperBeauty/superbeauty&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;fe4c0f30aa359c41d9f9a5f69c8c4192&quot;
+  }
+}</component>
+  <component name="RunManager">
+    <configuration name="SeedApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="seed" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.project.seed.SeedApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5af479fe-4481-447f-9453-c772a0cd167d" name="Changes" comment="" />
+      <created>1667588996625</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1667588996625</updated>
+      <workItem from="1667588999493" duration="25000" />
+      <workItem from="1667589036847" duration="179000" />
+      <workItem from="1667589227771" duration="874000" />
+      <workItem from="1667590125807" duration="1354000" />
+      <workItem from="1667591493611" duration="223000" />
+      <workItem from="1667591733498" duration="437000" />
+      <workItem from="1667598939710" duration="1972000" />
+      <workItem from="1667600946449" duration="389000" />
+      <workItem from="1667601366192" duration="4116000" />
+      <workItem from="1667872189087" duration="70000" />
+      <workItem from="1667907040023" duration="112000" />
+      <workItem from="1667907256897" duration="18000" />
+      <workItem from="1668189007295" duration="945000" />
+      <workItem from="1668190575200" duration="3251000" />
+      <workItem from="1668442401078" duration="47000" />
+      <workItem from="1668641629918" duration="17000" />
+      <workItem from="1668679445474" duration="4000" />
+      <workItem from="1668786003732" duration="20000" />
+      <workItem from="1668805603545" duration="1216000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
